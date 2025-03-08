@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Join NYMUN - Nashik Youth Model United Nations, where young leaders engage in diplomacy, debate global issues, and enhance public speaking skills. Be part of Nashik's first Non-Institutional MUN conference!">
     
-    <meta name="keywords" content="NYMUN, Nashik MUN, Model United Nations Nashik, Youth MUN, Nashik Youth Model United Nations, MUN India, diplomacy, public speaking, debate, leadership, international relations, student conference, UN simulation, policy-making, global issues, Abhi Pareek,edxtra ,edxtra.tech">
+    menuLines[0].style.transform = 'rotate(0) translate(0, 0)';
     
     <meta name="author" content="NYMUN - Nashik Youth Model United Nations">
     <meta name="robots" content="index, follow">
@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -233,11 +233,11 @@
 
     /* === Footer === */
     footer {
-        background-color: var(--primary-indigo);
+        background: var(--primary-indigo);
         color: var(--white);
-        padding: 4rem 5%;
-        position: relative;
-        overflow: hidden;
+        padding: 4rem 1rem 2rem;
+        margin-top: 4rem;
+        font-family: 'Poppins', sans-serif;
     }
 
     .footer-container {
@@ -351,11 +351,11 @@
         </nav>
 
         <!-- Hamburger Menu for Mobile -->
-        <div class="hamburger" style="display: none; cursor: pointer; width: 40px; height: 40px; position: relative; z-index: 1001;">
-            <div class="line1" style="width: 30px; height: 2px; background-color: #FFFFFF; margin: 6px 0; transition: all 0.3s ease;"></div>
-            <div class="line2" style="width: 30px; height: 2px; background-color: #FFFFFF; margin: 6px 0; transition: all 0.3s ease;"></div>
-            <div class="line3" style="width: 30px; height: 2px; background-color: #FFFFFF; margin: 6px 0; transition: all 0.3s ease;"></div>
-        </div>
+<div class="hamburger" style="display: none; cursor: pointer; width: 40px; height: 40px; position: relative; z-index: 1001; justify-content: center; align-items: center; flex-direction: column;">
+    <div class="line1" style="width: 30px; height: 3px; background-color: #FFFFFF; margin: 6px 0; transition: all 0.3s ease;"></div>
+    <div class="line2" style="width: 30px; height: 3px; background-color: #FFFFFF; margin: 6px 0; transition: all 0.3s ease;"></div>
+    <div class="line3" style="width: 30px; height: 3px; background-color: #FFFFFF; margin: 6px 0; transition: all 0.3s ease;"></div>
+</div>
 
         <!-- Mobile Nav -->
         <div class="mobile-nav" style="position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: rgba(47, 46, 110, 0.98); backdrop-filter: blur(15px); display: flex; flex-direction: column; justify-content: center; align-items: center; transition: all 0.5s ease; z-index: 1000;">
@@ -418,16 +418,16 @@
             mobileNav.style.right = '-100%';
             body.style.overflow = 'auto';
             // Reset hamburger icon
-            menuLines[0].style.transform = 'rotate(0) translate(0, 0)';
+            menuLines[0].style.transform = 'rotate(0deg) translateY(0px)';
             menuLines[1].style.opacity = '1';
-            menuLines[2].style.transform = 'rotate(0) translate(0, 0)';
+            menuLines[2].style.transform = 'rotate(0deg) translateY(0px)';
         } else {
             mobileNav.style.right = '0px';
             body.style.overflow = 'hidden';
             // Animate to X icon
-            menuLines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+            menuLines[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
             menuLines[1].style.opacity = '0';
-            menuLines[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+            menuLines[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
         }
     });
 
@@ -437,9 +437,9 @@
             mobileNav.style.right = '-100%';
             body.style.overflow = 'auto';
             // Reset hamburger icon
-            menuLines[0].style.transform = 'rotate(0) translate(0, 0)';
+            menuLines[0].style.transform = 'rotate(0deg) translateY(0px)';
             menuLines[1].style.opacity = '1';
-            menuLines[2].style.transform = 'rotate(0) translate(0, 0)';
+            menuLines[2].style.transform = 'rotate(0deg) translateY(0px)';
         });
     });
 
@@ -457,6 +457,10 @@
             // Reset mobile nav if screen resized
             mobileNav.style.right = '-100%';
             body.style.overflow = 'auto';
+            // Also reset hamburger icon
+            menuLines[0].style.transform = 'rotate(0deg) translateY(0px)';
+            menuLines[1].style.opacity = '1';
+            menuLines[2].style.transform = 'rotate(0deg) translateY(0px)';
         }
     }
 
@@ -579,142 +583,442 @@
 
 
 
-   <section class="hero" style="position: relative; min-height: 100vh; background: 
-       linear-gradient(45deg, rgba(25, 25, 112, 0.9) 0%, rgba(11, 11, 69, 0.95) 100%),
-       url('https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover;
-       display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: white; overflow-x: hidden; padding: 2rem 1rem; box-sizing: border-box;"  style="margin-top: 80px;">
-    
-    <!-- Pattern Overlay -->
-    <div class="pattern-overlay" style="position: absolute; width: 100%; height: 100%; 
-           background-image: url('data:image/svg+xml,%3Csvg width= "52"  height="26" viewBox="0 0 52 26" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23D4AF37" fill-opacity="0.1"%3E%3Cpath d="M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
-           mix-blend-mode: overlay; pointer-events: none;"></div>
+<section class="hero" id="hero-section">
+    <!-- Animated Background Elements -->
+    <div class="hero-bg-elements">
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+        <div class="world-map-bg"></div>
+        <div class="pattern-overlay"></div>
+    </div>
 
-    <div class="hero-content" style= "position: relative; z-index: 2; width: 100%; max-width: 900px; margin: 0 auto; padding: 0 1rem; box-sizing: border-box;">
-        <!-- Badge -->
-        <div class="hero-badge" style="position: relative; display: inline-block; 
-               background: rgba(212, 175, 55, 0.15); 
-               border-radius: 50px; padding: 0.75rem 1.5rem; 
-               margin: 0 auto 2rem; 
-               backdrop-filter: blur(8px);
-               border: 1px solid rgba(212, 175, 55, 0.3);
-               font-weight: 600; letter-spacing: 2px;
-               animation: fadeInDown 0.8s ease-out;
-               max-width: 90%;">
-            <svg style="position: absolute; left: -20px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px;" 
-                 viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2">
+    <div class="hero-content-container">
+        <!-- Hero Badge -->
+        <div class="hero-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2">
                 <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/>
             </svg>
             NYMUN 2025
-            <svg style="position: absolute; right: -20px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px;" 
-                 viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2">
                 <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/>
             </svg>
         </div>
 
-        <h1 class="hero-title" style="font-size: clamp(2.5rem, 6vw, 4rem); margin: 0 auto 1.5rem; 
-               background: linear-gradient(45deg, #D4AF37, #B89C34);
-               -webkit-background-clip: text; 
-               -webkit-text-fill-color: transparent;
-               text-transform: uppercase; letter-spacing: 2px;
-               line-height: 1.2;
-               text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-               animation: fadeInUp 0.8s ease-out;
-               max-width: 95%;">
-            COZ ONCE IS NEVER ENOUGH
-        </h1>
+        <h1 class="hero-title">COZ ONCE IS NEVER ENOUGH</h1>
 
-        <p class="hero-subtitle" style="font-size: clamp(1.2rem, 3vw, 1.5rem); margin: 0 auto 1.5rem; 
-               text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-               line-height: 1.4;
-               animation: fadeInUp 1s ease-out;
-               max-width: 90%;">
-            A Global Forum for the Brightest Minds to Shape the Future
-        </p>
+        <p class="hero-subtitle">A Global Forum for the Brightest Minds to Shape the Future</p>
 
         <!-- Resolution Paper -->
-        <div class="resolution-paper" style="position: relative; 
-               width: 100%; max-width: 600px; padding: 1.5rem; margin: 0 auto 2rem;
-               background: rgba(212, 175, 55, 0.05);
-               border-left: 4px solid #D4AF37;
-               box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-               backdrop-filter: blur(12px);
-               animation: fadeInUp 1.2s ease-out;
-               box-sizing: border-box;">
-            <p style="font-size: clamp(1rem, 2.5vw, 1.1rem); margin: 0; line-height: 1.6; 
-                  text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
-                Join us at NYMUN 2025, where leaders, changemakers, and thinkers come together to discuss and tackle global challenges in the spirit of diplomacy and cooperation.
-            </p>
-            <div class="corner-decoration" style="position: absolute; width: 30px; height: 30px; 
-                   border-right: 2px solid #D4AF37; border-top: 2px solid #D4AF37;
-                   top: 0; right: 0;"></div>
-            <div class="corner-decoration" style="position: absolute; width: 30px; height: 30px; 
-                   border-left: 2px solid #D4AF37; border-bottom: 2px solid #D4AF37;
-                   bottom: 0; left: 0;"></div>
+        <div class="resolution-paper">
+            <p>Join us at NYMUN 2025, where leaders, changemakers, and thinkers come together to discuss and tackle global challenges in the spirit of diplomacy and cooperation.</p>
+            <div class="corner-decoration top-right"></div>
+            <div class="corner-decoration bottom-left"></div>
         </div>
 
         <!-- CTA Buttons -->
-        <div class="hero-cta-container" style="display: flex; justify-content: center; 
-               gap: 1.5rem; margin-bottom: 2rem; position: relative; z-index: 3;
-               flex-wrap: wrap;">
-            <a href="#about-us" class="hero-cta-primary" style="display: inline-flex; align-items: center;
-                   padding: 0.75rem 1.5rem; background: linear-gradient(45deg, #B89C34, #D4AF37);
-                   color: #1A1A4E; border-radius: 8px; font-weight: 600; letter-spacing: 1px;
-                   text-transform: uppercase; text-decoration: none; transition: transform 0.3s ease;
-                   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-                   font-size: clamp(0.9rem, 2.5vw, 1rem);
-                   min-width: 200px;
-                   justify-content: center;">
-                <svg style="width: 18px; height: 18px; margin-right: 8px;" viewBox="0 0 24 24" 
-                     fill="none" stroke="currentColor" stroke-width="2">
+        <div class="hero-cta-container">
+            <a href="#about-us" class="hero-cta-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/>
                 </svg>
                 Register Now
             </a>
-            <a href="about-us.html" class="hero-cta-secondary" style="display: inline-flex; align-items: center;
-                   padding: 0.75rem 1.5rem; background: rgba(212, 175, 55, 0.15);
-                   border: 2px solid #D4AF37; color: white; border-radius: 8px;
-                   font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
-                   text-decoration: none; transition: all 0.3s ease;
-                   backdrop-filter: blur(5px);
-                   font-size: clamp(0.9rem, 2.5vw, 1rem);
-                   min-width: 200px;
-                   justify-content: center;">
-                <svg style="width: 18px; height: 18px; margin-right: 8px;" viewBox="0 0 24 24" 
-                     fill="none" stroke="currentColor" stroke-width="2">
+            <a href="about-us.html" class="hero-cta-secondary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                 </svg>
                 Learn More
             </a>
         </div>
 
+        <br><br><br>
+
         <!-- Scroll Indicator -->
-        <div class="scroll-indicator" style="position: absolute; bottom: 20px; left: 50%; 
-               transform: translateX(-50%); text-align: center; z-index: 4;">
-            <div class="scroll-line" style="width: 1px; height: 40px; background: linear-gradient(to bottom, 
-                   #D4AF37 0%, transparent 100%); margin: 0 auto 8px; 
-                   animation: scrollLine 2s infinite;"></div>
-            <span style="font-size: 0.9rem; letter-spacing: 2px; color: rgba(212, 175, 55, 0.8);">
-                EXPLORE FURTHER
-            </span>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>EXPLORE FURTHER</span>
         </div>
+    </div>
+
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+        <div class="float-item item-1"><i class="fas fa-globe"></i></div>
+        <div class="float-item item-2"><i class="fas fa-file-alt"></i></div>
+        <div class="float-item item-3"><i class="fas fa-handshake"></i></div>
+        <div class="float-item item-4"><i class="fas fa-users"></i></div>
     </div>
 </section>
 
+<!-- Hero Section Styles -->
 <style>
-    @keyframes fadeInDown {
-        from { opacity: 0; transform: translateY(-50px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(50px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes scrollLine {
-        0% { height: 40px; opacity: 0; }
-        50% { height: 60px; opacity: 1; }
-        100% { height: 40px; opacity: 0; }
+    /* Hero Section Styles */
+    .hero {
+        position: relative;
+        min-height: 100vh;
+        background: linear-gradient(45deg, rgba(25, 25, 112, 0.9) 0%, rgba(11, 11, 69, 0.95) 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        overflow: hidden;
+        padding: 2rem 1rem;
+        box-sizing: border-box;
+        margin-top: 80px;
     }
 
+    /* Background Elements */
+    .hero-bg-elements {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .bg-circle {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.15;
+        filter: blur(50px);
+        animation: pulse 15s infinite alternate;
+    }
+
+    .circle-1 {
+        width: 500px;
+        height: 500px;
+        background: var(--accent-orange);
+        top: -150px;
+        left: -150px;
+        animation-delay: 0s;
+    }
+
+    .circle-2 {
+        width: 600px;
+        height: 600px;
+        background: var(--primary-indigo);
+        bottom: -200px;
+        right: -200px;
+        animation-delay: 5s;
+    }
+
+    .world-map-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('https://cdnjs.cloudflare.com/ajax/libs/world-map/0.1.0/world-map.svg') no-repeat center;
+        background-size: cover;
+        opacity: 0.08;
+        mix-blend-mode: lighten;
+    }
+
+    .pattern-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url('data:image/svg+xml,%3Csvg width= "52"  height="26" viewBox="0 0 52 26" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23D4AF37" fill-opacity="0.1"%3E%3Cpath d="M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+        mix-blend-mode: overlay;
+        pointer-events: none;
+    }
+
+    /* Hero Content */
+    .hero-content-container {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    .hero-badge {
+        position: relative;
+        display: inline-block;
+        background: rgba(212, 175, 55, 0.15);
+        border-radius: 50px;
+        padding: 0.75rem 1.5rem;
+        margin: 0 auto 2rem;
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        font-weight: 600;
+        letter-spacing: 2px;
+        animation: fadeInDown 0.8s ease-out;
+        max-width: 90%;
+    }
+
+    .hero-badge svg {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .hero-badge svg:first-child {
+        left: -20px;
+    }
+
+    .hero-badge svg:last-child {
+        right: -20px;
+    }
+
+    .hero-title {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        margin: 0 auto 1.5rem;
+        background: linear-gradient(45deg, #D4AF37, #B89C34);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 1.2;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        animation: fadeInUp 0.8s ease-out;
+        max-width: 95%;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(1.2rem, 3vw, 1.5rem);
+        margin: 0 auto 1.5rem;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        line-height: 1.4;
+        animation: fadeInUp 1s ease-out;
+        max-width: 90%;
+    }
+
+    .resolution-paper {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        padding: 1.5rem;
+        margin: 0 auto 2rem;
+        background: rgba(212, 175, 55, 0.05);
+        border-left: 4px solid #D4AF37;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        backdrop-filter: blur(12px);
+        animation: fadeInUp 1.2s ease-out;
+        box-sizing: border-box;
+    }
+
+    .resolution-paper p {
+        font-size: clamp(1rem, 2.5vw, 1.1rem);
+        margin: 0;
+        line-height: 1.6;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+
+    .corner-decoration {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+    }
+
+    .top-right {
+        top: 0;
+        right: 0;
+        border-right: 2px solid #D4AF37;
+        border-top: 2px solid #D4AF37;
+    }
+
+    .bottom-left {
+        bottom: 0;
+        left: 0;
+        border-left: 2px solid #D4AF37;
+        border-bottom: 2px solid #D4AF37;
+    }
+
+    /* CTA Buttons */
+    .hero-cta-container {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        position: relative;
+        z-index: 3;
+        flex-wrap: wrap;
+    }
+
+    .hero-cta-primary {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.75rem 1.5rem;
+        background: linear-gradient(45deg, #B89C34, #D4AF37);
+        color: #1A1A4E;
+        border-radius: 8px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        font-size: clamp(0.9rem, 2.5vw, 1rem);
+        min-width: 200px;
+        justify-content: center;
+    }
+
+    .hero-cta-primary svg, .hero-cta-secondary svg {
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+    }
+
+    .hero-cta-secondary {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.75rem 1.5rem;
+        background: rgba(212, 175, 55, 0.15);
+        border: 2px solid #D4AF37;
+        color: white;
+        border-radius: 8px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+        font-size: clamp(0.9rem, 2.5vw, 1rem);
+        min-width: 200px;
+        justify-content: center;
+    }
+
+    .hero-cta-primary:hover, .hero-cta-secondary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(212, 175, 55, 0.5);
+    }
+
+    /* Scroll Indicator */
+    .scroll-indicator {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        z-index: 4;
+    }
+
+    .scroll-line {
+        width: 1px;
+        height: 40px;
+        background: linear-gradient(to bottom, #D4AF37 0%, transparent 100%);
+        margin: 0 auto 8px;
+        animation: scrollLine 2s infinite;
+    }
+
+    .scroll-indicator span {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        color: rgba(212, 175, 55, 0.8);
+    }
+
+    /* Floating Elements */
+    .floating-elements {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .float-item {
+        position: absolute;
+        font-size: 1.5rem;
+        color: rgba(212, 175, 55, 0.3);
+        animation: float 15s infinite ease-in-out;
+    }
+
+    .item-1 {
+        top: 15%;
+        left: 10%;
+        animation-delay: 0s;
+    }
+
+    .item-2 {
+        top: 20%;
+        right: 15%;
+        animation-delay: 2s;
+    }
+
+    .item-3 {
+        bottom: 25%;
+        left: 15%;
+        animation-delay: 3s;
+    }
+
+    .item-4 {
+        bottom: 20%;
+        right: 10%;
+        animation-delay: 1s;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes scrollLine {
+        0% {
+            height: 40px;
+            opacity: 0;
+        }
+        50% {
+            height: 60px;
+            opacity: 1;
+        }
+        100% {
+            height: 40px;
+            opacity: 0;
+        }
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0) rotate(0deg);
+        }
+        50% {
+            transform: translateY(-20px) rotate(10deg);
+        }
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            opacity: 0.15;
+        }
+        50% {
+            transform: scale(1.1);
+            opacity: 0.2;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 0.15;
+        }
+    }
+
+    /* Mobile Responsiveness */
     @media (max-width: 480px) {
         .hero-badge svg {
             display: none;
@@ -735,6 +1039,51 @@
         }
     }
 </style>
+
+<script>
+// Hero section floating elements behavior
+document.addEventListener('DOMContentLoaded', function() {
+    // Add more randomized floating elements
+    const floatingElements = document.querySelector('.floating-elements');
+    
+    // Add random particles
+    for (let i = 0; i < 10; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'float-item';
+        
+        const icons = ['fa-flag', 'fa-comments', 'fa-lightbulb', 'fa-balance-scale', 'fa-gavel'];
+        const randomIcon = icons[Math.floor(Math.random() * icons.length)];
+        
+        particle.innerHTML = `<i class="fas ${randomIcon}"></i>`;
+        
+        // Random position
+        particle.style.top = `${Math.random() * 80 + 10}%`;
+        particle.style.left = `${Math.random() * 80 + 10}%`;
+        
+        // Random animation delay
+        particle.style.animationDelay = `${Math.random() * 10}s`;
+        
+        // Random size
+        const size = Math.random() * 0.5 + 0.8; // Scale between 0.8 and 1.3
+        particle.style.transform = `scale(${size})`;
+        
+        floatingElements.appendChild(particle);
+    }
+    
+    // Parallax effect for hero section
+    document.addEventListener('mousemove', function(e) {
+        const hero = document.getElementById('hero-section');
+        const moveX = (e.clientX - window.innerWidth / 2) * 0.005;
+        const moveY = (e.clientY - window.innerHeight / 2) * 0.005;
+        
+        const floatItems = document.querySelectorAll('.float-item');
+        floatItems.forEach(item => {
+            const depth = Math.random() * 0.5 + 0.5; // Random depth factor
+            item.style.transform = `translate(${moveX * depth}px, ${moveY * depth}px)`;
+        });
+    });
+});
+</script>
 
 <!-- About Section -->
 <section class="about-section" style="background: var(--primary-bg); padding: 4rem 1rem;" id="about-us">
@@ -795,7 +1144,7 @@
                     <h4 style="color: var(--primary-indigo); font-size: 1.25rem; margin-bottom: 0.5rem;">
                         Global Perspectives
                     </h4>
-                    <p style="color: var(--text-color); line-height: 1.6; font-size: 0.95rem;">
+                    <p style="color: var (--text-color); line-height: 1.6; font-size: 0.95rem;">
                         Engage in global challenge discussions
                     </p>
                 </div>
@@ -1012,6 +1361,7 @@ Our goal was to educate students and provide them with the MUN experience they t
     display: flex;
     justify-content: center;
 }
+
 
 .image-wrapper {
     position: absolute;
@@ -1258,6 +1608,10 @@ Our goal was to educate students and provide them with the MUN experience they t
     
     .founders-content {
         gap: 1rem;
+    }
+
+    .timeline-item {
+        font-size: small;
     }
 }
 </style>
@@ -1509,14 +1863,14 @@ document.addEventListener('DOMContentLoaded', function() {
         <!-- Timeline Ribbon -->
         <div style="margin-top: 60px; padding: 30px; background: var(--primary-indigo); border-radius: 15px; position: relative; transform: rotate(-1deg); box-shadow: 0 20px 40px rgba(47,46,110,0.2);">
             <div style="display: flex; justify-content: space-around; align-items: center; color: white;">
-                <div style="text-align: center;">
+                <div style="text-align: center;" class="timeline-item">
                     <i class="fas fa-calendar-alt" style="font-size: 2rem; margin-bottom: 10px;"></i>
                     <p style="margin: 0;">September 21-22, 2024</p>
                 </div>
                 <div style="height: 40px; width: 2px; background: var(--accent-orange);"></div>
-                <div style="text-align: center;">
+                <div style="text-align: center;" class="timeline-item">
                     <i class="fas fa-map-marker-alt" style="font-size: 2rem; margin-bottom: 10px;"></i>
-                    <p style="margin: 0;">Nashik,Maharashtra</p>
+                    <p style="margin: 0;">Nashik, Maharashtra</p>
                 </div>
             </div>
         </div>
@@ -1557,7 +1911,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <!-- Testimonial Card 1 -->
         <div style="perspective: 1000px; transition: transform 0.3s ease-out;" onmouseover="rotateIn(this)" onmouseout="rotateOut(this)">
-            <div class="testimonial-inner" style="position: relative; transform-style: preserve-3d; background: var(--white); border-radius: 24px; border: 2px solid var(--neutral-bg); box-shadow: 0px 20px 40px rgba(47, 46, 110, 0.1); padding: 32px; overflow: hidden; transition: transform 0.6s;">
+            <div class="testimonial-inner" style="position: relative; transform-style: preserve-3d; background: var (--white); border-radius: 24px; border: 2px solid var(--neutral-bg); box-shadow: 0px 20px 40px rgba(47, 46, 110, 0.1); padding: 32px; overflow: hidden; transition: transform 0.6s;">
 
                 <!-- Decorative Element -->
                 <div style="position: absolute; top: -20px; left: -20px; width: 100px; height: 100px; background: rgba(74, 73, 169, 0.1); border-radius: 50%; opacity: 0.1; animation: float 6s infinite;"></div>
@@ -1655,30 +2009,30 @@ function rotateOut(card) {
 
 
 <!-- Footer Section -->
-<footer style="background: var(--primary-indigo); color: var(--white); padding: 4rem 1rem 2rem; margin-top: 4rem;">
+<footer style="background: var(--primary-indigo); color: var(--white); padding: 4rem 1rem 2rem; margin-top: 4rem; font-family: 'Poppins', sans-serif;">
     <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; padding-bottom: 3rem;">
         <!-- Conference Info -->
         <div style="padding-right: 2rem;">
             <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem;">
                 <i class="fas fa-handshake" style="font-size: 2rem; color: var(--accent-orange);"></i>
-                <h3 style="font-size: 1.5rem; color: var(--accent-orange);">NYMUN 2025</h3>
+                <h3 style="font-size: 1.5rem; color: var(--accent-orange); font-family: 'Poppins', sans-serif; font-weight: 600;">NYMUN 2025</h3>
             </div>
-            <p style="color: rgba(255,255,255,0.8); line-height: 1.6;">
+            <p style="color: rgba(255,255,255,0.8); line-height: 1.6; font-family: 'Poppins', sans-serif; font-weight: 300;">
                 Strives to encourage meaningful conversations on global challenges by simulating debates similar to those at the United Nations.
             </p>
             <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
-                <i class="fas fa-globe-americas" style="font-size: 1.5rem; color: var(--accent-orange);"></i><p><a href="nymun.org"  style="color: rgba(255,255,255,0.8); text-decoration: none; transition: 0.3s; display: flex; align-items: center; gap: 0.5rem;">nymun.org</a></p>
+                <i class="fas fa-globe-americas" style="font-size: 1.5rem; color: var(--accent-orange);"></i><p><a href="nymun.org" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: 0.3s; display: flex; align-items: center; gap: 0.5rem; font-family: 'Poppins', sans-serif;">nymun.org</a></p>
                 <i class="fas fa-diploma" style="font-size: 1.5rem; color: var(--accent-orange);"></i>
             </div>
         </div>
 
         <!-- Quick Links with Enhanced Icons -->
         <div>
-            <h4 style="font-size: 1.25rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.5rem; color: var(--accent-orange);">
+            <h4 style="font-size: 1.25rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.5rem; color: var(--accent-orange); font-family: 'Poppins', sans-serif; font-weight: 600;">
                 Quick Links
                 <span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 2px; background: var(--accent-orange);"></span>
             </h4>
-            <ul style="list-style: none; padding: 0; display: grid; gap: 0.75rem;">
+            <ul style="list-style: none; padding: 0; display: grid; gap: 0.75rem; font-family: 'Poppins', sans-serif;">
                 <li><a href="index.html#about" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: 0.3s; display: flex; align-items: center; gap: 0.5rem;">
                     <i class="fas fa-info-circle" style="color: var(--accent-orange);"></i> About</a></li>
                 <li><a href="index.html#Committees" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: 0.3s; display: flex; align-items: center; gap: 0.5rem;">
@@ -1692,11 +2046,11 @@ function rotateOut(card) {
 
         <!-- Contact Info -->
         <div>
-            <h4 style="font-size: 1.25rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.5rem; color: var(--accent-orange);">
+            <h4 style="font-size: 1.25rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.5rem; color: var(--accent-orange); font-family: 'Poppins', sans-serif; font-weight: 600;">
                 Contact Us
                 <span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 2px; background: var(--accent-orange);"></span>
             </h4>
-            <div style="display: grid; gap: 1rem;">
+            <div style="display: grid; gap: 1rem; font-family: 'Poppins', sans-serif;">
                 <div style="display: flex; align-items: center; gap: 0.75rem;">
                     <i class="fas fa-envelope-open-text" style="color: var(--accent-orange);"></i>
                     <span style="color: rgba(255,255,255,0.8);">info@nymun.org</span>
@@ -1711,7 +2065,7 @@ function rotateOut(card) {
 
         <!-- Social Media -->
         <div>
-            <h4 style="font-size: 1.25rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.5rem; color: var(--accent-orange);">
+            <h4 style="font-size: 1.25rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.5rem; color: var(--accent-orange); font-family: 'Poppins', sans-serif; font-weight: 600;">
                 Follow Us
                 <span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 2px; background: var(--accent-orange);"></span>
             </h4>
@@ -1722,7 +2076,7 @@ function rotateOut(card) {
                 <a href="#" style="color: var(--white); transition: 0.3s;"><i class="fab fa-youtube"></i></a>
             </div>
             <div style="margin-top: 2rem; background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px;">
-                <p style="margin: 0; color: rgba(255,255,255,0.8); font-size: 0.9rem;">
+                <p style="margin: 0; color: rgba(255,255,255,0.8); font-size: 0.9rem; font-family: 'Poppins', sans-serif;">
                     <i class="fas fa-certificate" style="margin-right: 0.5rem; color: var(--accent-orange);"></i>
                     Official Social Handles
                 </p>
@@ -1732,12 +2086,12 @@ function rotateOut(card) {
 
     <!-- Copyright Section -->
     <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; margin-top: 2rem; text-align: center;">
-        <p style="color: rgba(255,255,255,0.6); margin: 0; font-size: 0.9rem;">
-            � 2025 NYMUN. All rights reserved. 
+        <p style="color: rgba(255,255,255,0.6); margin: 0; font-size: 0.9rem; font-family: 'Poppins', sans-serif;">
+            &copy; 2025 NYMUN. All rights reserved. 
             <span style="display: block; margin-top: 0.5rem;">
-                DESIGNED AND DEVELOPED BY<br> 
-                <a href="https://edxtra.tech" style="color: var(--accent-orange); text-decoration: none; font-weight: 600;">
-                    Abhi Pareek & Aaryash K<br>@edxtra.tech
+                Designed And Developed By   <br> 
+                <a href="https://edxtra.tech" style="color: var(--accent-orange); text-decoration: none; font-weight: 600; font-family: 'Poppins', sans-serif;">
+                    Abhi Pareek & Aaryash Khalkar<br>@edXtra.tech
                 </a>
             </span>
         </p>
