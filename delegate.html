@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="NYMUN Delegate Registration Form for the Inaugural Model United Nations Conference">
+    <meta name="theme-color" content="#0d6efd">
+    <title>MUN Registration Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="container mt-4 mb-4">
+        <div class="card shadow-lg border-0 rounded-lg animate__animated animate__fadeIn">
+            <div class="card-header bg-primary text-white text-center">
+                <h2 class="mb-0">Delegate Registrations Form</h2>
+            </div>
+            
+            <!-- Form Progress Indicator -->
+            <div class="progress" style="height: 5px; border-radius: 0;">
+                <div class="progress-bar bg-success" role="progressbar" id="form-progress" style="width: 20%"></div>
+            </div>
+            
+            <!-- Form Description -->
+            <div class="card-body bg-light form-section" id="section-welcome">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="p-3 mb-3 animate__animated animate__fadeIn">
+                            <h4 class="text-primary mb-3">Welcome to NYMUN's Inaugural Edition!</h4>
+                            <p>NYMUN is here with its Inaugural Edition, promising to be a grand affair.
+                            By participating, delegates will gain inspiration needed to become catalysts for positive change in the society.
+                            Join us for an unforgettable experience of diplomacy, debate, and development as we shape the leaders of tomorrow.</p>
+                            
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <h5><i class="fas fa-calendar-alt text-primary"></i> Event Details</h5>
+                                    <ul class="list-unstyled">
+                                        <li><strong>Date:</strong> 14th and 15th of June, 2025</li>
+                                        <li><strong>Venue:</strong> Sadhna Education Foundation, Nashik</li>
+                                        <li><strong>Round 1 Registration fee:</strong> ₹2100</li>
+                                        <li><strong>Socials fee:</strong> ₹700</li>
+                                    </ul>
+                                    <p class="text-danger"><strong>Note:</strong> Registration fee is NON REFUNDABLE</p>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <h5><i class="fas fa-phone-alt text-primary"></i> Contact Information</h5>
+                                    <p>For any queries, please contact:</p>
+                                    <ul class="list-unstyled">
+                                        <li><strong>Tanishq Kaurani:</strong> +91 7249227454 <br><small class="text-muted">USG delegate Affairs</small></li>
+                                        <li class="mt-2"><strong>Riya Badhan:</strong> +91 74208 84341 <br><small class="text-muted">Director General</small></li>
+                                        <li class="mt-2"><strong>Tahseen Pathan:</strong> +91 93735 97539 <br><small class="text-muted">Charge D'affaires</small></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-3">
+                                <p><strong>For regular updates, follow our social media:</strong></p>
+                                <a href="#" class="btn btn-sm btn-outline-primary me-2"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                                <a href="https://www.instagram.com/nymun.25/" class="btn btn-sm btn-outline-danger"><i class="fab fa-instagram"></i> Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-3">
+                    <button type="button" class="btn btn-primary btn-lg next-btn" data-next="section-personal">
+                        Start Registration <i class="fas fa-arrow-right ms-2"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="card-body">
+                <div id="form-messages" class="alert d-none"></div>
+                
+                <form id="mun-form" method="post" enctype="multipart/form-data">
+                    <!-- Personal Information Section -->
+                    <div class="form-section" id="section-personal" style="display: none;">
+                        <div class="row">
+                            <div class="col-md-12 mb-4">
+                                <h4 class="animate__animated animate__fadeInUp">Personal Information</h4>
+                                <hr>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3 animate__animated animate__fadeInUp">
+                                <label for="name" class="form-label">Full Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3 animate__animated animate__fadeInUp">
+                                <label for="dob" class="form-label">Date of Birth <span class="text-danger">*</span></label>
+                                <input type="date" class="form-control" id="dob" name="dob" required>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3 animate__animated animate__fadeInUp">
+                                <label for="phone" class="form-label">Contact Number <span class="text-danger">*</span></label>
+                                <input type="tel" class="form-control" id="phone" name="phone" required>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3 animate__animated animate__fadeInUp">
+                                <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3 animate__animated animate__fadeInUp">
+                                <label for="city" class="form-label">City of Residence <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="city" name="city" required>
+                            </div>
+                            
+                            <div class="col-12 mt-4 d-flex justify-content-between flex-column flex-md-row">
+                                <button type="button" class="btn btn-outline-secondary prev-btn mb-2 mb-md-0" data-prev="section-welcome">
+                                    <i class="fas fa-arrow-left me-2"></i> Previous
+                                </button>
+                                <button type="button" class="btn btn-primary next-btn" data-next="section-education">
+                                    Next <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Education Information Section -->
+                    <div class="form-section" id="section-education" style="display: none;">
+                        <div class="row">
+                            <div class="col-md-12 mb-3 animate__animated animate__fadeInUp">
+                                <h4>Education Information</h4>
+                                <hr>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3 animate__animated animate__fadeInUp">
+                                <label for="institutional-level" class="form-label">Institutional Level <span class="text-danger">*</span></label>
+                                <select class="form-select" id="institutional-level" name="institutional_level" required>
+                                    <option value="">Select Level</option>
+                                    <option value="School">School</option>
+                                    <option value="College">College</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-12 mb-3" id="school-details" style="display: none;">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3 animate__animated animate__fadeInUp">
+                                        <label for="grade" class="form-label">Grade <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="grade" name="grade">
+                                    </div>
+                                    <div class="col-md-6 mb-3 animate__animated animate__fadeInUp">
+                                        <label for="school-name" class="form-label">School Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="school-name" name="school_name">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12 mb-3" id="college-details" style="display: none;">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3 animate__animated animate__fadeInUp">
+                                        <label for="year" class="form-label">Year <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="year" name="year">
+                                    </div>
+                                    <div class="col-md-6 mb-3 animate__animated animate__fadeInUp">
+                                        <label for="college-name" class="form-label">College Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="college-name" name="college_name">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mt-4 d-flex justify-content-between flex-column flex-md-row">
+                                <button type="button" class="btn btn-outline-secondary prev-btn mb-2 mb-md-0" data-prev="section-personal">
+                                    <i class="fas fa-arrow-left me-2"></i> Previous
+                                </button>
+                                <button type="button" class="btn btn-primary next-btn" data-next="section-mun-experience">
+                                    Next <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- MUN Experience Section -->
+                    <div class="form-section" id="section-mun-experience" style="display: none;">
+                        <div class="row">
+                            <div class="col-md-12 mb-3 animate__animated animate__fadeInUp">
+                                <h4>MUN Experience</h4>
+                                <hr>
+                            </div>
+                            
+                            <div class="col-md-12 mb-3 animate__animated animate__fadeInUp">
+                                <label for="previous-experience" class="form-label">Previous MUN Experience</label>
+                                <textarea class="form-control" id="previous-experience" name="previous_experience" rows="3"></textarea>
+                            </div>
+                            
+                            <div class="col-md-12 mb-3 animate__animated animate__fadeInUp">
+                                <label class="form-label">Committees and Agendas</label>
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item bg-light"><strong>1. AIPPM:</strong> Review of 10 years of NDA government</li>
+                                            <li class="list-group-item bg-light"><strong>2. UNODC:</strong> Strategies to combat youth addiction and criminal activities through international cooperation</li>
+                                            <li class="list-group-item bg-light"><strong>3. UNESCO:</strong> Addressing global education barriers stemming from racism and discrimination</li>
+                                            <li class="list-group-item bg-light"><strong>4. HUNSC:</strong> 9/11</li>
+                                            <li class="list-group-item bg-light"><strong>5. Continuous Crisis Committee:</strong> Classified <br><small class="text-muted">(Only for experienced delegates. 4+ MUNs)</small></li>
+                                            <li class="list-group-item bg-light"><strong>6. IPL:</strong> Mega Auction 2025 <small class="text-muted">(Quadra Delegation)</small></li>
+                                            <li class="list-group-item bg-light"><strong>7. International Press:</strong>
+                                                <ul>
+                                                    <li>a) Journalism</li>
+                                                    <li>b) Photography</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12 mb-3 animate__animated animate__fadeInUp">
+                                <label for="campus-ambassador" class="form-label">Mention the name of Campus Ambassador, if any:</label>
+                                <input type="text" class="form-control" id="campus-ambassador" name="campus_ambassador" placeholder="Leave blank if not applicable">
+                            </div>
+
+                            <div class="col-12 mt-4 d-flex justify-content-between flex-column flex-md-row">
+                                <button type="button" class="btn btn-outline-secondary prev-btn mb-2 mb-md-0" data-prev="section-education">
+                                    <i class="fas fa-arrow-left me-2"></i> Previous
+                                </button>
+                                <button type="button" class="btn btn-primary next-btn" data-next="section-committee-preference">
+                                    Next <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Committee & Portfolio Preferences Section -->
+                    <div class="form-section" id="section-committee-preference" style="display: none;">
+                        <div class="row">
+                            <div class="col-md-12 mb-3 animate__animated animate__fadeInUp">
+                                <h4>Committee & Portfolio Preferences</h4>
+                                <hr>
+                            </div>
+                            
+                            <div class="col-md-12 mb-3 animate__animated animate__fadeInUp">
+                                <div class="card bg-light mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fas fa-info-circle text-primary"></i> Committee & Portfolio Details</h5>
+                                        <p>Select your committee and portfolio preferences from the available options. These represent the roles you wish to take on during the MUN conference.</p>
+                                        <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#portfolioModal">
+                                            <i class="fas fa-list-alt me-2"></i> View Committee & Portfolio Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12 mb-3 animate__animated animate__fadeInUp">
+                                <label class="form-label">Committee Preference <span class="text-danger">*</span></label>
+                                <div class="row">
+                                    <div class="col-md-4 mb-2">
+                                        <input type="text" class="form-control" name="committee_preference_1" placeholder="Preference 1" required>
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <input type="text" class="form-control" name="committee_preference_2" placeholder="Preference 2">
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <input type="text" class="form-control" name="committee_preference_3" placeholder="Preference 3">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12 mb-3 animate__animated animate__fadeInUp">
+                                <label class="form-label">Portfolio Preference <span class="text-danger">*</span></label>
+                                <div class="row">
+                                    <div class="col-md-4 mb-2">
+                                        <input type="text" class="form-control" name="portfolio_preference_1" placeholder="Portfolio Preference 1" required>
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <input type="text" class="form-control" name="portfolio_preference_2" placeholder="Portfolio Preference 2">
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <input type="text" class="form-control" name="portfolio_preference_3" placeholder="Portfolio Preference 3">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mt-4 d-flex justify-content-between flex-column flex-md-row">
+                                <button type="button" class="btn btn-outline-secondary prev-btn mb-2 mb-md-0" data-prev="section-mun-experience">
+                                    <i class="fas fa-arrow-left me-2"></i> Previous
+                                </button>
+                                <button type="button" class="btn btn-primary next-btn" data-next="section-additional-info">
+                                    Next <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Additional Information Section -->
+                    <div class="form-section" id="section-additional-info" style="display: none;">
+                        <div class="row">
+                            <div class="col-md-12 mb-3 animate__animated animate__fadeInUp">
+                                <h4>Additional Information</h4>
+                                <hr>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3 animate__animated animate__fadeInUp">
+                                <label for="shuttle" class="form-label">Shuttle Service Requirement</label>
+                                <select class="form-select" id="shuttle" name="shuttle">
+                                    <option value="">Select Option</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3 animate__animated animate__fadeInUp">
+                                <label for="accommodation" class="form-label">Accommodation Requirement</label>
+                                <select class="form-select" id="accommodation" name="accommodation">
+                                    <option value="">Select Option</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6 mb-3 animate__animated animate__fadeInUp">
+                                <label for="food-preference" class="form-label">Food Preference</label>
+                                <select class="form-select" id="food-preference" name="food_preference">
+                                    <option value="">Select Option</option>
+                                    <option value="Normal (Veg)">Normal (Veg)</option>
+                                    <option value="Jain">Jain</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3 animate__animated animate__fadeInUp">
+                                <label for="socials-preference" class="form-label">Socials Preference</label>
+                                <select class="form-select" id="socials-preference" name="socials_preference">
+                                    <option value="">Select Option</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12 mt-4 d-flex justify-content-between flex-column flex-md-row">
+                                <button type="button" class="btn btn-outline-secondary prev-btn mb-2 mb-md-0" data-prev="section-committee-preference">
+                                    <i class="fas fa-arrow-left me-2"></i> Previous
+                                </button>
+                                <button type="button" class="btn btn-primary next-btn" data-next="section-payment">
+                                    Next <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Information Section -->
+                    <div class="form-section" id="section-payment" style="display: none;">
+                        <div class="row">
+                            <div class="col-md-12 mb-3 animate__animated animate__fadeInUp">
+                                <h4>Payment Information</h4>
+                                <hr>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4 animate__animated animate__fadeInUp">
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-3"><i class="fas fa-money-bill-wave text-success"></i> Payment Details</h5>
+                                        <ul class="list-unstyled">
+                                            <li><strong>Registration Fee:</strong> ₹2100</li>
+                                            <li><strong>Socials Fee:</strong> ₹700 (if applicable)</li>
+                                            <li class="text-danger mt-2"><strong>Note:</strong> Registration fee is NON REFUNDABLE</li>
+                                        </ul>
+                                        <p class="mt-3">Please scan the QR code to make your payment or use the account details below:</p>
+                                        <p><strong>Account Name:</strong> NYMUN Conference<br>
+                                           <strong>Account Number:</strong> 1234567890<br>
+                                           <strong>IFSC Code:</strong> BANK0123456</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4 text-center animate__animated animate__fadeInUp">
+                                <h5 class="mb-3">Payment QR Code</h5>
+                                <div class="qr-container p-3 border rounded bg-white shadow-sm mb-3">
+                                    <img src="assets/images/payment-qr.png" alt="Payment QR Code" class="img-fluid" style="max-width: 200px;">
+                                </div>
+                                <p class="text-muted small">Scan to pay via UPI</p>
+                            </div>
+                            
+                            <div class="col-md-12 mb-3 animate__animated animate__fadeInUp">
+                                <label for="qr-upload" class="form-label">Upload Payment Screenshot <span class="text-danger">*</span></label>
+                                <input type="file" class="form-control" id="qr-upload" name="qr_upload" accept="image/*">
+                                <div class="form-text">Please upload a screenshot of your payment confirmation for verification.</div>
+                            </div>
+
+                            <div class="col-md-12 mb-3 animate__animated animate__fadeInUp">
+                                <label for="transaction-id" class="form-label">Transaction ID/Reference Number</label>
+                                <input type="text" class="form-control" id="transaction-id" name="transaction_id" placeholder="Enter your payment transaction ID">
+                            </div>
+
+                            <div class="col-12 mt-4 d-flex justify-content-between flex-column flex-md-row">
+                                <button type="button" class="btn btn-outline-secondary prev-btn mb-2 mb-md-0" data-prev="section-additional-info">
+                                    <i class="fas fa-arrow-left me-2"></i> Previous
+                                </button>
+                                <button type="button" id="submit-btn" class="btn btn-primary btn-hover-effect">
+                                    <i class="fas fa-paper-plane"></i> Submit Registration
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Portfolio Modal -->
+    <div class="modal fade" id="portfolioModal" tabindex="-1" aria-labelledby="portfolioModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="portfolioModalLabel">Committee & Portfolio Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="accordion" id="committeeAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    United Nations General Assembly (UNGA)
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#committeeAccordion">
+                                <div class="accordion-body">
+                                    <p>The main deliberative body of the UN where all member states have equal representation.</p>
+                                    <h6>Available Portfolios:</h6>
+                                    <ul>
+                                        <li>United States of America</li>
+                                        <li>Russian Federation</li>
+                                        <li>People's Republic of China</li>
+                                        <li>United Kingdom</li>
+                                        <li>France</li>
+                                        <li>Germany</li>
+                                        <li>India</li>
+                                        <li>Japan</li>
+                                        <!-- Add more portfolios as needed -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    United Nations Security Council (UNSC)
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#committeeAccordion">
+                                <div class="accordion-body">
+                                    <p>The UN body responsible for maintaining international peace and security.</p>
+                                    <h6>Available Portfolios:</h6>
+                                    <ul>
+                                        <li>United States of America (Permanent Member)</li>
+                                        <li>Russian Federation (Permanent Member)</li>
+                                        <li>People's Republic of China (Permanent Member)</li>
+                                        <li>United Kingdom (Permanent Member)</li>
+                                        <li>France (Permanent Member)</li>
+                                        <li>Algeria (Non-Permanent Member)</li>
+                                        <li>Guyana (Non-Permanent Member)</li>
+                                        <li>Japan (Non-Permanent Member)</li>
+                                        <!-- Add more portfolios as needed -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    World Health Organization (WHO)
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#committeeAccordion">
+                                <div class="accordion-body">
+                                    <p>The specialized agency responsible for international public health.</p>
+                                    <h6>Available Portfolios:</h6>
+                                    <ul>
+                                        <li>Director-General</li>
+                                        <li>United States of America</li>
+                                        <li>Germany</li>
+                                        <li>United Kingdom</li>
+                                        <li>India</li>
+                                        <li>South Africa</li>
+                                        <li>Brazil</li>
+                                        <li>Australia</li>
+                                        <!-- Add more portfolios as needed -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
